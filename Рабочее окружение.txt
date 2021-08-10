@@ -1,0 +1,148 @@
+ИНИЦИАЛИЗИРУЕМ ПАКЕТ
+npm init
+УСТАНОВИМ LIVE-SERVER
+npm install --save-dev live-server
+УСТАНАВЛИВАЕМ BABEL
+npm install --save-dev @babel/core @babel/cli @babel/preset-env
+npm install core-js@3
+.babelrc
+{
+"presets": [
+[
+"@babel/preset-env", {
+"useBuiltIns": "usage",
+"corejs": 3
+}
+]
+]
+}
+WEBPACK
+npm install --save-dev webpack webpack-cli babel-loader
+npm install --save-dev webpack-merge
+webpack.config.js
+точка входа
+module.exports = {
+entry: './path/to/my/entry/file.js',
+}
+
+WEBPACK DEV SERVER
+npm install webpack-dev-server  --save-dev
+
+JEST
+npm install --save-dev jest babel-jest @babel/core @babel/cli @babel/preset-env
+npm install --save-dev @types/jest @types/node jest ts-jest typescript ДЛЯ ТАЙПСКРИПТА 
+
+Puppeteer
+npm install --save-dev puppeteer
+для линта
+
+"env": {
+...
+"jest": true
+}
+
+УСТАНАВЛИВАЕМ ESLINT
+npm install --save-dev eslint
+npx eslint --init
+npm run lint
+npm run lint -- --fix
+
+
+scripts
+
+"start": "webpack serve --config webpack.dev.js",
+"buildbabel": "webpack --config webpack.prod.js",
+"lint": "eslint .",
+"lint:fix": "eslint --fix --ext .js,.jsx .",
+"test": "jest --coverage",
+"build": "babel src -d dist"
+
+
+Плагины
+npm install terser-webpack-plugin --save-dev
+npm install css-minimizer-webpack-plugin --save-dev
+(npm install optimize-css-assets-webpack-plugin --save-dev   - OLD!!!)
+npm install mini-css-extract-plugin --save-dev
+npm install html-webpack-plugin --save-dev
+
+Лоадеры
+npm install css-loader --save-dev
+npm install html-loader --save-dev
+npm install url-loader --save-dev
+npm install babel-loader @babel/core @babel/preset-env webpack --save-dev
+npm install file-loader --save-dev
+
+
+
+Пакеты YARN
+
+при глюках во время установки пакетов:
+npm config set registry https://registry.npmjs.org/
+
+yarn add core-js@3 --save-dev
+
+BABEL
+yarn add @babel/core --dev
+yarn add -D babel-cli
+
+WEBPACK
+yarn add -D webpack
+yarn add -D webpack-cli
+yarn add --dev webpack-merge
+
+WEBPACK DEV SERVER
+yarn add -D webpack-dev-server
+
+JEST
+yarn add -D jest
+
+Puppeteer
+yarn add -D puppeteer
+
+ESLINT
+yarn add -D eslint
+
+Плагины
+yarn add terser-webpack-plugin --save-dev
+yarn add -D optimize-css-assets-webpack-plugin
+yarn add -D mini-css-extract-plugin
+yarn add -D html-webpack-plugin
+
+Лоадеры
+yarn add -D css-loader
+yarn add -D html-loader
+yarn add -D url-loader
+yarn add -D babel-loader @babel/core @babel/preset-env webpack
+yarn add file-loader --save-dev
+
+
+SERVER
+
+Forever server
+npm install forever
+
+KOA
+
+npm install koa
+npm install koa koa-body (установка зависимостей, не уверен что нужно)
+
+UUID (модуль генерации индификаторов)
+
+npm install uuid
+
+KOA STATIC (модуль для работы со статикой)
+
+npm install koa-static
+
+
+ROUTER
+
+npm install koa-router (для работы с маршрутами, иерархией URL)
+
+SERVER SENT EVENTS
+
+npm install http-event-stream
+
+WEB SOCKETS
+
+npm install ws
